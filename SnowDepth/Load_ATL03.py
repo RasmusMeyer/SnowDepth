@@ -74,9 +74,9 @@ def load_ATL03(path, date, beam, resolution):
 
     Inputs:
         path: Path to AOI-folder
-        date: Date of observation (e.g. 20210211)
+        date: Folder for date of observation (e.g. 20210211)
         beam: ICESat-2 has 6 beams [gt1l, gt2l, gt3l, gt1r, gt2r, gt3r]
-        resolution: Can be set to either 10 or 100 m depending on point density
+        resolution: Can be set to either 10 or 100 m depending on distance between points
 
     Outputs:
         df: Pandas dataframe with coordinates, height and date for photons with confidence level > 2

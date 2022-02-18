@@ -42,6 +42,7 @@ def masking(df_sd, path, date, slope_threshold):
 
     # Mask out points on slope over X degrees (e.g. 8)
     df_sd_masked = df_sd_masked[df_sd_masked['SLOPE'] < slope_threshold]
+    df_sd_masked = df_sd_masked[df_sd_masked['SLOPE'] > 1]
     print('Remaining points after applying slope mask: ',df_sd_masked.shape[0])
     
     # Mask out points that are not 1

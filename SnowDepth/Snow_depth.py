@@ -33,10 +33,10 @@ def snow_depth(df_surface, DEM):
     df_sd['DEM'] = [x[0] for x in src.sample(coords)]
 
     #Norwegian DEM
-    df_sd['SD'] = round(df_sd.Surface_corr - df_sd.DEM,2)
+    #df_sd['SD'] = round(df_sd.Surface_corr - df_sd.DEM,2)
 
     #Arctic DEM - Using same coordinate system as IS2, so no need to correct.
-    #pts['SD'] = round(pts.Surface - pts.DEM,2)
+    df_sd['SD'] = round(df_sd.Surface - df_sd.DEM,2)
 
     print('Remaining points: ',df_sd.shape[0])
 
